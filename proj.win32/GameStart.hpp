@@ -29,6 +29,11 @@ private:
 public:
 	static cocos2d::Scene* createScene();
 	virtual bool init();
+	void initializeUIControls(Node* rootNode);
+	void setupAnimations(Node* rootNode);
+	void setupCloudAnimations(Node* rootNode);
+	void setupBirdAnimation(Node* rootNode);
+	void setupLeafAnimations(Node* rootNode);
 	void btnClick(Button* btn, Widget::TouchEventType eventType);
 	CREATE_FUNC(GameStart);
 };

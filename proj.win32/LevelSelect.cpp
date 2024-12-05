@@ -35,6 +35,7 @@ void LevelSelect::initializeUIControls(Node* rootNode)
 {
     _btnLeft = static_cast<Button*>(rootNode->getChildByName("btnLeft"));
     _btnRight = static_cast<Button*>(rootNode->getChildByName("btnRight"));
+    _btnHome = static_cast<Button*>(rootNode->getChildByName("btnHome"));
 
     // 使用 lambda 统一处理按钮点击
     auto buttonCallback = [this](Ref* sender, Widget::TouchEventType type) {
@@ -50,11 +51,14 @@ void LevelSelect::initializeUIControls(Node* rootNode)
             changePage(currentPage - 1);
         } else if (btn->getName() == "btnRight") {
             changePage(currentPage + 1);
+        } else if (btn->getName() == "btnHome") {
+            Director::getInstance()->replaceScene(GameStart::createScene());
         }
     };
 
     _btnLeft->addTouchEventListener(buttonCallback);
     _btnRight->addTouchEventListener(buttonCallback);
+    _btnHome->addTouchEventListener(buttonCallback);
 }
 
 void LevelSelect::setupPageView(Node* rootNode)

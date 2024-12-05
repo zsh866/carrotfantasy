@@ -22,6 +22,7 @@ public:
     private:
         Button* _btnLeft;
         Button* _btnRight;
+        Button* _btnHome;
         PageView* _pageView;
         void pageEvent(Ref* page, PageView::EventType type);
         void layputEvent(Layout* layout, Widget::TouchEventType eventType);
