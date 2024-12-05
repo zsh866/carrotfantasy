@@ -1,0 +1,39 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "Map/map1.tmx",
+    "expandedProjectPaths": [
+        ".",
+        "Map"
+    ],
+    "fileStates": {
+        "Map/32x32.tsx": {
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "Map/map1.tmx": {
+            "scale": 1,
+            "selectedLayer": 3,
+            "viewCenter": {
+                "x": 378,
+                "y": 410
+            }
+        }
+    },
+    "last.imagePath": "E:/cocos-game/CarrotDefense/Map",
+    "map.height": 18,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 24,
+    "openFiles": [
+        "Map/map1.tmx",
+        "Map/32x32.tsx"
+    ],
+    "project": "CarrotDefense.tiled-project",
+    "recentFiles": [
+        "Map/32x32.tsx",
+        "Map/map1.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx"
+}

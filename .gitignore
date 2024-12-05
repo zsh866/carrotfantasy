@@ -1,0 +1,74 @@
+# Cocos2d-x
+cocos2d/
+proj.android/build/
+proj.android/app/build/
+proj.android/app/libs/
+proj.android/app/.cxx/
+proj.android/app/obj/
+proj.android/app/assets/
+proj.android/local.properties
+proj.ios_mac/build/
+proj.win32/Debug.win32/
+proj.win32/Release.win32/
+proj.win32/x64/
+bin/
+libs/
+
+# Visual Studio 2022
+.vs/
+*.sdf
+*.opensdf
+*.suo
+*.user
+*.aps
+*.pdb
+*.ilk
+*.ncb
+ipch/
+Debug/
+Release/
+x64/
+Win32/
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+
+# 编译产物
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.lib
+*.exp
+*.idb
+
+# 临时文件
+*.log
+*.tlog
+*.lastbuildstate
+*.cache
+*.tmp
+Thumbs.db
+.DS_Store
+
+# IDE配置文件
+*.suo
+*.user
+*.sln.docstates
+*.userprefs
+.idea/
+.vscode/
+
+# CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+*.cmake
+!CMakeLists.txt
+
+# 其他
+*.swp
+*~
