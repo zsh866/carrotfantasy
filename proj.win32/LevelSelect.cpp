@@ -21,5 +21,83 @@ bool LevelSelect::init()
         return false;
     }
     this->addChild(rootNode);
+    // 初始化UI控件
+    initializeUIControls(rootNode);
+
+    // 设置页面视图
+    setupPageView(rootNode);
+
+    changePage(0);
     return true;
+}
+
+void LevelSelect::initializeUIControls(Node* rootNode)
+{
+    _btnLeft = static_cast<Button*>(rootNode->getChildByName("btnLeft"));
+    _btnRight = static_cast<Button*>(rootNode->getChildByName("btnRight"));
+
+    // 使用 lambda 统一处理按钮点击
+    auto buttonCallback = [this](Ref* sender, Widget::TouchEventType type) {
+        if (type != Widget::TouchEventType::ENDED)
+            return;
+
+        auto btn = static_cast<Button*>(sender);
+        if (!btn)
+            return;
+
+        const int currentPage = _pageView->getCurPageIndex();
+        if (btn->getName() == "btnLeft") {
+            changePage(currentPage - 1);
+        } else if (btn->getName() == "btnRight") {
+            changePage(currentPage + 1);
+        }
+    };
+
+    _btnLeft->addTouchEventListener(buttonCallback);
+    _btnRight->addTouchEventListener(buttonCallback);
+}
+
+void LevelSelect::setupPageView(Node* rootNode)
+{
+    _pageView = static_cast<PageView*>(rootNode->getChildByName("PageView"));
+    _pageView->addEventListener([this](Ref* sender, PageView::EventType type) {
+        changePage(_pageView->getCurPageIndex());
+    });
+
+    // 设置页面触摸事件
+    for (int i = _pageView->getPages().size() - 1; i >= 0; --i) {
+        if (auto page = static_cast<Layout*>(_pageView->getPage(i))) {
+            page->setUserData(reinterpret_cast<void*>(static_cast<std::intptr_t>(i)));
+            page->addTouchEventListener([this](Ref* sender, Widget::TouchEventType type) {
+                if (auto layout = static_cast<Layout*>(sender)) {
+                    handlePageTouch(layout, type);
+                }
+            });
+        }
+    }
+}
+
+void LevelSelect::changePage(int index)
+{
+    const auto totalPages = _pageView->getPages().size();
+    if (index < 0 || index >= totalPages) {
+        return;
+    }
+
+    _btnLeft->setVisible(index > 0);
+    _btnRight->setVisible(index < totalPages - 1);
+
+    if (index != _pageView->getCurPageIndex()) {
+        _pageView->scrollToPage(index);
+    }
+}
+
+void LevelSelect::handlePageTouch(Layout* layout, Widget::TouchEventType eventType)
+{
+    if (eventType != Widget::TouchEventType::ENDED) {
+        return;
+    }
+
+    // 在这里处理页面点击逻辑
+    CCLOG("页面被点击：%s", layout->getName().c_str());
 }

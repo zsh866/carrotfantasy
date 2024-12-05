@@ -29,6 +29,6 @@ private:
 public:
 	static cocos2d::Scene* createScene();
 	virtual bool init();
-	void btnClick(Button* btn, TouchEventType eventType);
+	void btnClick(Button* btn, Widget::TouchEventType eventType);
 	CREATE_FUNC(GameStart);
 };
