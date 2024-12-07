@@ -2,6 +2,8 @@
 cocos2d::Scene* LevelSelect::createScene()
 {
     auto scene = Scene::create();
+    assert(scene != nullptr);
+
     auto layer = LevelSelect::create();
     scene->addChild(layer);
 
@@ -32,6 +34,8 @@ bool LevelSelect::init()
 
 void LevelSelect::initializeUIControls(Node* rootNode)
 {
+    assert(rootNode != nullptr);
+
     _btnLeft = static_cast<Button*>(rootNode->getChildByName("btnLeft"));
     _btnRight = static_cast<Button*>(rootNode->getChildByName("btnRight"));
     _btnHome = static_cast<Button*>(rootNode->getChildByName("btnHome"));
@@ -62,6 +66,8 @@ void LevelSelect::initializeUIControls(Node* rootNode)
 
 void LevelSelect::setupPageView(Node* rootNode)
 {
+    assert(rootNode != nullptr);
+
     _pageView = static_cast<PageView*>(rootNode->getChildByName("PageView"));
     _pageView->addEventListener([this](Ref* sender, PageView::EventType type) {
         changePage(_pageView->getCurPageIndex());
@@ -97,6 +103,8 @@ void LevelSelect::changePage(int index)
 
 void LevelSelect::handlePageTouch(Layout* layout, Widget::TouchEventType eventType)
 {
+    assert(layout != nullptr);
+
     if (eventType != Widget::TouchEventType::ENDED) {
         return;
     }

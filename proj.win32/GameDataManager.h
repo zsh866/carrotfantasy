@@ -4,18 +4,22 @@
 
 class GameDataManager {
 private:
-    static GameDataManager* _instance;
-    sqlite3* _db;
-    bool _initialized;
+    struct SQLiteDeleter {
+        void operator()(sqlite3* db)
+        {
+            if (db){
+                sqlite3_close(db);
+                CCLOG("Database closed");
+            }
+        }
+    };
+    std::unique_ptr<sqlite3, SQLiteDeleter> _db;
+    bool _initialized { false };
 
-    GameDataManager()
-        : _db(nullptr)
-        , _initialized(false)
-    {
-    }
+    GameDataManager() = default;
 
 public:
-    static GameDataManager& getInstance()
+    static GameDataManager& getInstance() noexcept
     {
         static GameDataManager instance;
         return instance;
@@ -47,4 +51,7 @@ public:
     // ½ûÖ¹¿½±´
     GameDataManager(const GameDataManager&) = delete;
     GameDataManager& operator=(const GameDataManager&) = delete;
+
+    // Îö¹¹º¯Êý
+    ~GameDataManager() = default;
 };

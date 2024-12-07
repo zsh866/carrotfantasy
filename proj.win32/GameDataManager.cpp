@@ -9,13 +9,17 @@ bool GameDataManager::init()
         return true;
 
     std::string dbPath = FileUtils::getInstance()->getWritablePath() + "gamedata.db";
-    bool isNewDatabase = !FileUtils::getInstance()->isFileExist(dbPath);
+    bool const isNewDatabase = !FileUtils::getInstance()->isFileExist(dbPath);
 
-    int result = sqlite3_open(dbPath.c_str(), &_db);
+    sqlite3* raw_db;
+    int result = sqlite3_open(dbPath.c_str(), &raw_db);
     if (result != SQLITE_OK) {
-        CCLOG("Failed to open database: %s", sqlite3_errmsg(_db));
+        CCLOG("Failed to open database: %s", sqlite3_errmsg(raw_db));
         return false;
     }
+
+    _db.reset(raw_db); // 将原始指针交给智能指针管理
+
     if (isNewDatabase) {
         // 创建关卡进度表
         const char* sql_level = "CREATE TABLE IF NOT EXISTS level_progress ("
@@ -39,9 +43,9 @@ bool GameDataManager::init()
                                    "value TEXT)";
 
         char* errMsg = nullptr;
-        result = sqlite3_exec(_db, sql_level, nullptr, nullptr, &errMsg);
-        result |= sqlite3_exec(_db, sql_state, nullptr, nullptr, &errMsg);
-        result |= sqlite3_exec(_db, sql_settings, nullptr, nullptr, &errMsg);
+        result = sqlite3_exec(_db.get(), sql_level, nullptr, nullptr, &errMsg);
+        result |= sqlite3_exec(_db.get(), sql_state, nullptr, nullptr, &errMsg);
+        result |= sqlite3_exec(_db.get(), sql_settings, nullptr, nullptr, &errMsg);
 
         if (result != SQLITE_OK) {
             CCLOG("Failed to create tables: %s", errMsg);
@@ -54,7 +58,7 @@ bool GameDataManager::init()
                                  "(name='level_progress' OR name='game_state' OR name='settings')";
 
         sqlite3_stmt* stmt;
-        result = sqlite3_prepare_v2(_db, sql_verify, -1, &stmt, nullptr);
+        result = sqlite3_prepare_v2(_db.get(), sql_verify, -1, &stmt, nullptr);
         if (result != SQLITE_OK)
             return false;
 
@@ -83,7 +87,7 @@ bool GameDataManager::saveLevelProgress(int levelType, int mapIndex, int stars)
                       "VALUES (?, ?, ?, 1)";
 
     sqlite3_stmt* stmt;
-    int result = sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr);
+    int result = sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr);
     if (result != SQLITE_OK)
         return false;
 
@@ -100,7 +104,7 @@ bool GameDataManager::saveLevelProgress(int levelType, int mapIndex, int stars)
                                  "VALUES (?, ?, 1) "
                                  "ON CONFLICT DO NOTHING";
 
-        result = sqlite3_prepare_v2(_db, sql_unlock, -1, &stmt, nullptr);
+        result = sqlite3_prepare_v2(_db.get(), sql_unlock, -1, &stmt, nullptr);
         if (result == SQLITE_OK) {
             sqlite3_bind_int(stmt, 1, levelType);
             sqlite3_bind_int(stmt, 2, mapIndex + 1);
@@ -123,7 +127,7 @@ bool GameDataManager::isLevelUnlocked(int levelType, int mapIndex)
                       "WHERE level_type = ? AND map_index = ?";
 
     sqlite3_stmt* stmt;
-    int result = sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr);
+    const int result = sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr);
     if (result != SQLITE_OK)
         return false;
 
@@ -148,7 +152,7 @@ bool GameDataManager::saveGameState(int levelType, int mapIndex, const std::stri
                       "VALUES (?, ?, ?)";
 
     sqlite3_stmt* stmt;
-    int result = sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr);
+    int result = sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr);
     if (result != SQLITE_OK)
         return false;
 
@@ -171,7 +175,7 @@ std::string GameDataManager::loadGameState(int levelType, int mapIndex)
                       "WHERE level_type = ? AND map_index = ?";
 
     sqlite3_stmt* stmt;
-    const int result = sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr);
+    const int result = sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr);
     if (result != SQLITE_OK)
         return "";
 
@@ -201,7 +205,7 @@ bool GameDataManager::saveSoundSettings(bool bgmEnabled, bool sfxEnabled,
     bool success = true;
 
     // 保存BGM开关状态
-    if (sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr) == SQLITE_OK) {
+    if (sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr) == SQLITE_OK) {
         sqlite3_bind_text(stmt, 1, "bgm_enabled", -1, SQLITE_STATIC);
         sqlite3_bind_text(stmt, 2, bgmEnabled ? "1" : "0", -1, SQLITE_STATIC);
         success &= (sqlite3_step(stmt) == SQLITE_DONE);
@@ -209,7 +213,7 @@ bool GameDataManager::saveSoundSettings(bool bgmEnabled, bool sfxEnabled,
     }
 
     // 保存音效开关状态
-    if (sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr) == SQLITE_OK) {
+    if (sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr) == SQLITE_OK) {
         sqlite3_bind_text(stmt, 1, "sfx_enabled", -1, SQLITE_STATIC);
         sqlite3_bind_text(stmt, 2, sfxEnabled ? "1" : "0", -1, SQLITE_STATIC);
         success &= (sqlite3_step(stmt) == SQLITE_DONE);
@@ -217,18 +221,18 @@ bool GameDataManager::saveSoundSettings(bool bgmEnabled, bool sfxEnabled,
     }
 
     // 保存BGM音量
-    if (sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr) == SQLITE_OK) {
+    if (sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr) == SQLITE_OK) {
         sqlite3_bind_text(stmt, 1, "bgm_volume", -1, SQLITE_STATIC);
         std::string volumeStr = std::to_string(bgmVolume);
         CCLOG("Saving bgm_volume: %s", volumeStr.c_str());
 
         if (sqlite3_bind_text(stmt, 2, volumeStr.c_str(), -1, SQLITE_STATIC) != SQLITE_OK) {
-            CCLOG("Failed to bind BGM volume: %s", sqlite3_errmsg(_db));
+            CCLOG("Failed to bind BGM volume: %s", sqlite3_errmsg(_db.get()));
         }
 
-        int stepResult = sqlite3_step(stmt);
+        const int stepResult = sqlite3_step(stmt);
         if (stepResult != SQLITE_DONE) {
-            CCLOG("Failed to save BGM volume: %s", sqlite3_errmsg(_db));
+            CCLOG("Failed to save BGM volume: %s", sqlite3_errmsg(_db.get()));
         }
 
         success &= (stepResult == SQLITE_DONE);
@@ -236,18 +240,18 @@ bool GameDataManager::saveSoundSettings(bool bgmEnabled, bool sfxEnabled,
     }
 
     // 保存音效音量
-    if (sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr) == SQLITE_OK) {
+    if (sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr) == SQLITE_OK) {
         sqlite3_bind_text(stmt, 1, "sfx_volume", -1, SQLITE_STATIC);
         std::string volumeStr = std::to_string(sfxVolume);
         CCLOG("Saving sfx_volume: %s", volumeStr.c_str());
 
         if (sqlite3_bind_text(stmt, 2, volumeStr.c_str(), -1, SQLITE_STATIC) != SQLITE_OK) {
-            CCLOG("Failed to bind SFX volume: %s", sqlite3_errmsg(_db));
+            CCLOG("Failed to bind SFX volume: %s", sqlite3_errmsg(_db.get()));
         }
 
-        int stepResult = sqlite3_step(stmt);
+        const int stepResult = sqlite3_step(stmt);
         if (stepResult != SQLITE_DONE) {
-            CCLOG("Failed to save SFX volume: %s", sqlite3_errmsg(_db));
+            CCLOG("Failed to save SFX volume: %s", sqlite3_errmsg(_db.get()));
         }
         success &= (stepResult == SQLITE_DONE);
         sqlite3_finalize(stmt);
@@ -277,24 +281,24 @@ std::string getSettingValue(sqlite3* db, const char* key, const char* defaultVal
 
 bool GameDataManager::getBgmEnabled()
 {
-    return getSettingValue(_db, "bgm_enabled", "1") == "1";
+    return getSettingValue(_db.get(), "bgm_enabled", "1") == "1";
 }
 
 bool GameDataManager::getSfxEnabled()
 {
-    return getSettingValue(_db, "sfx_enabled", "1") == "1";
+    return getSettingValue(_db.get(), "sfx_enabled", "1") == "1";
 }
 
 float GameDataManager::getBgmVolume()
 {
-    auto ret = getSettingValue(_db, "bgm_volume", "50.0");
+    auto ret = getSettingValue(_db.get(), "bgm_volume", "50.0");
     CCLOG("**BgmVolume: %s **", ret.c_str());
     return std::stof(ret);
 }
 
 float GameDataManager::getSfxVolume()
 {
-    auto ret = getSettingValue(_db, "sfx_volume", "50.0");
+    auto ret = getSettingValue(_db.get(), "sfx_volume", "50.0");
     CCLOG("**SfxVolume: %s **", ret.c_str());
     return std::stof(ret);
 }
@@ -308,7 +312,7 @@ int GameDataManager::getLevelStars(int levelType, int mapIndex)
                       "WHERE level_type = ? AND map_index = ?";
 
     sqlite3_stmt* stmt;
-    int result = sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr);
+    const int result = sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr);
     if (result != SQLITE_OK)
         return 0;
 
@@ -333,7 +337,7 @@ void GameDataManager::clearGameState(int levelType, int mapIndex)
                       "WHERE level_type = ? AND map_index = ?";
 
     sqlite3_stmt* stmt;
-    int result = sqlite3_prepare_v2(_db, sql, -1, &stmt, nullptr);
+    int const result = sqlite3_prepare_v2(_db.get(), sql, -1, &stmt, nullptr);
     if (result != SQLITE_OK)
         return;
 
@@ -347,7 +351,7 @@ void GameDataManager::clearGameState(int levelType, int mapIndex)
 void GameDataManager::cleanup()
 {
     if (_db) {
-        sqlite3_close(_db);
+        sqlite3_close(_db.get());
         _db = nullptr;
     }
     _initialized = false;

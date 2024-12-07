@@ -9,7 +9,7 @@ enum class LevelType {
 class SelectedMapInfo {
 private:
     // 单例模式，构造函数私有
-    SelectedMapInfo()
+    SelectedMapInfo() noexcept
         : _currentMapLevel(LevelType::NONE)
         , _currentMapIndex(-1)
     {
@@ -17,7 +17,7 @@ private:
     LevelType _currentMapLevel; // 当前选择的地图等级
     int _currentMapIndex; // 当前选择的地图索引
 public:
-    static SelectedMapInfo& getInstance()
+    static SelectedMapInfo& getInstance() noexcept
     {
         static SelectedMapInfo instance;
         return instance;
