@@ -39,6 +39,12 @@
     <ClCompile Include="LevelSelect.cpp">
       <Filter>src\Scene</Filter>
     </ClCompile>
+    <ClCompile Include="MapSelectUI.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDataManager.cpp">
+      <Filter>src\Global</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -61,6 +67,15 @@
     </ClInclude>
     <ClInclude Include="LevelSelect.hpp">
       <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectedMapInfo.hpp">
+      <Filter>src\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="MapSelectUI.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDataManager.h">
+      <Filter>src\Global</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

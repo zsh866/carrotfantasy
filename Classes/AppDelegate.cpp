@@ -78,6 +78,10 @@ static int register_all_packages()
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
+    if (!GameDataManager::getInstance().init()) {
+        CCLOG("Failed to initialize GameDataManager");
+        return false;
+    }
     // initialize director
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
@@ -91,7 +95,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
         director->setOpenGLView(glview);
     }
 
-    // turn on display FPS
+    // turn off display FPS
     director->setDisplayStats(false);
 
     // set FPS. the default value is 1.0/60 if you don't call this

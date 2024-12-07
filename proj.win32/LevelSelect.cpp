@@ -5,7 +5,6 @@ cocos2d::Scene* LevelSelect::createScene()
     auto layer = LevelSelect::create();
     scene->addChild(layer);
 
-
     return scene;
 }
 
@@ -104,4 +103,26 @@ void LevelSelect::handlePageTouch(Layout* layout, Widget::TouchEventType eventTy
 
     // 在这里处理页面点击逻辑
     CCLOG("页面被点击：%s", layout->getName().c_str());
+
+    auto level = LevelType((int)layout->getUserData());
+    SelectedMapInfo::getInstance().setmapLevel(level);
+
+    // 根据不同关卡加载对应的地图选择界面
+    std::string csbPath;
+    switch (level) {
+    case LevelType::SKY:
+        csbPath = "res/SkylineScene.csb";
+        break;
+    case LevelType::DESERT:
+        csbPath = "res/DesertMapSelect.csb";
+        break;
+    case LevelType::FOREST:
+        csbPath = "res/ForestMapSelect.csb";
+        break;
+    default:
+
+        return;
+    }
+
+    Director::getInstance()->replaceScene(MapSelectUI::createScene(csbPath));
 }
