@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="E:\cocos-game\CarrotDefense\build\CMakeFiles\eb97ba32161f9026527e3c1740541c90\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{356E278C-02E2-37EE-94F0-7C97A51FFE14}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

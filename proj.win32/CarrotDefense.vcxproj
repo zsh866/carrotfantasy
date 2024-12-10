@@ -152,12 +152,14 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="AudioManager.hpp" />
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="GameDataManager.cpp" />
     <ClCompile Include="GameStart.cpp" />
     <ClCompile Include="LevelSelect.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MapSelectUI.cpp" />
+    <ClCompile Include="Setting.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
@@ -169,7 +171,10 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClInclude Include="LevelSelect.hpp" />
     <ClInclude Include="main.h" />
     <ClInclude Include="MapSelectUI.h" />
+    <ClInclude Include="Property.hpp" />
     <ClInclude Include="SelectedMapInfo.hpp" />
+    <ClInclude Include="Setting.h" />
+    <ClInclude Include="StateObserver.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\cocos2d\cocos\2d\libcocos2d.vcxproj">

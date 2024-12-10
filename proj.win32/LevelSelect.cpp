@@ -112,7 +112,7 @@ void LevelSelect::handlePageTouch(Layout* layout, Widget::TouchEventType eventTy
     // 在这里处理页面点击逻辑
     CCLOG("页面被点击：%s", layout->getName().c_str());
 
-    auto level = LevelType((int)layout->getUserData());
+    const auto level = LevelType((int)layout->getUserData());
     SelectedMapInfo::getInstance().setmapLevel(level);
 
     // 根据不同关卡加载对应的地图选择界面

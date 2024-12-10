@@ -1,9 +1,5 @@
 #include "GameStart.hpp"
 
-namespace {
-CocosDenshion::SimpleAudioEngine* audio = CocosDenshion::SimpleAudioEngine::getInstance();
-}
-
 cocos2d::Scene* GameStart::createScene()
 {
     auto scene = Scene::create();
@@ -20,7 +16,7 @@ bool GameStart::init()
 
     auto rootNode = CSLoader::createNode("/res/MainScene.csb");
     if (!rootNode) {
-        CCLOG("错误：无法加载 MainScene.csb");
+        CCLOG("Failed to load MainScene.csb");
         return false;
     }
     addChild(rootNode);
@@ -31,16 +27,23 @@ bool GameStart::init()
     // 设置动画效果
     setupAnimations(rootNode);
 
+    // 设置音频音效
+    auto& audioManager = AudioManager::getInstance();
+    audioManager.initialize("/res/music/bgm.mp3");
+    audioManager.initializeWithConfig();
+
     return true;
 }
 
 void GameStart::initializeUIControls(Node* rootNode)
 {
+    assert(rootNode != nullptr);
     // 初始化按钮
     const std::vector<std::string> buttonNames = {
         "Btn_NormalModle",
         "Btn_Boss",
-        "Btn_MonsterNest"
+        "Btn_MonsterNest",
+        "Btn_Setting"
     };
 
     for (const auto& name : buttonNames) {
@@ -179,7 +182,7 @@ void GameStart::btnClick(Button* btn, Widget::TouchEventType eventType)
 {
     if (!btn)
         return;
-
+    CCLOG("btnClick: %s", btn->getName().c_str());
     switch (eventType) {
     case Widget::TouchEventType::BEGAN:
         btn->setVisible(false);
@@ -188,6 +191,9 @@ void GameStart::btnClick(Button* btn, Widget::TouchEventType eventType)
     case Widget::TouchEventType::ENDED:
         if (btn->getName() == "Btn_NormalModle") {
             auto scene = LevelSelect::createScene();
+            Director::getInstance()->replaceScene(scene);
+        } else if (btn->getName() == "Btn_Setting") {
+            auto scene = Setting::createScene();
             Director::getInstance()->replaceScene(scene);
         }
         break;

@@ -1,10 +1,11 @@
 #pragma once
-#include "cocos2d.h"
-#include "SimpleAudioEngine.h"
-#include "ui/CocosGUI.h"
 #include "Config.h"
+#include "LevelSelect.hpp"
+#include "Setting.h"
+#include "cocos2d.h"
 #include "cocostudio/CocoStudio.h"
-#include"LevelSelect.hpp"
+#include "ui/CocosGUI.h"
+#include "AudioManager.hpp"
 
 USING_NS_CC;
 using namespace cocostudio;
@@ -12,7 +13,6 @@ using namespace cocos2d::ui;
 
 extern ChineseWord Words;
 extern cocos2d::SpriteFrameCache* spritecache;
-extern CocosDenshion::SimpleAudioEngine* audio;
 class GameStart :public cocos2d::Scene
 {
 private:
@@ -22,6 +22,7 @@ private:
 	cocos2d::ui::Button* button_back;
 	cocos2d::ui::Button* button_alonegame;
 	cocos2d::ui::Button* button_onlinegame;
+	cocos2d::ui::Button* button_setting;
 
 	cocos2d::Label* _label_adver_0;
 

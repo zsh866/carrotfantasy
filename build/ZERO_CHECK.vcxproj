@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PreferredToolArchitecture>x86</PreferredToolArchitecture>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ResolveNugetPackages>false</ResolveNugetPackages>
+  </PropertyGroup>
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|win32">
+      <Configuration>Debug</Configuration>
+      <Platform>win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9B652E64-A6FB-3651-92BF-59792EDB0625}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <Platform>win32</Platform>
+    <ProjectName>ZERO_CHECK</ProjectName>
+    <VCProjectUpgraderObjectName>NoUpgrade</VCProjectUpgraderObjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'" Label="Configuration">
+    <ConfigurationType>Utility</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">
+    <Midl>
+      <AdditionalIncludeDirectories>E:\cocos-game\CarrotDefense\cocos2d;E:\cocos-game\CarrotDefense\cocos2d\cocos;E:\cocos-game\CarrotDefense\cocos2d\deprecated;E:\cocos-game\CarrotDefense\cocos2d\cocos\platform;E:\cocos-game\CarrotDefense\cocos2d\extensions;E:\cocos-game\CarrotDefense\cocos2d\external;E:\cocos-game\CarrotDefense\cocos2d\external\win32-specific\gles\include\OGLES;E:\cocos-game\CarrotDefense\cocos2d\external\glfw3\include\win32;E:\cocos-game\CarrotDefense\cocos2d\external\win32-specific\zlib\include;E:\cocos-game\CarrotDefense\Classes;E:\cocos-game\CarrotDefense\cocos2d\cocos\audio\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
+      <HeaderFileName>%(Filename).h</HeaderFileName>
+      <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\cocos-game\CarrotDefense\build\CMakeFiles\eb97ba32161f9026527e3c1740541c90\generate.stamp.rule">
+      <UseUtf8Encoding>Always</UseUtf8Encoding>
+      <BuildInParallel Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">true</BuildInParallel>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">Checking Build System</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SE:/cocos-game/CarrotDefense -BE:/cocos-game/CarrotDefense/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/cocos-game/CarrotDefense/build/TemplateCpp.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCXXInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeGenericSystem.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeInitializeConfigs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeLanguageInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeParseArguments.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeRCInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\CMakeCommonCompilerMacros.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Compiler\MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindOpenGL.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\FindPackageMessage.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-Initialize.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows-MSVC.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\Windows.cmake;C:\Program Files\CMake\share\cmake-3.29\Modules\Platform\WindowsPaths.cmake;E:\cocos-game\CarrotDefense\CMakeLists.txt;E:\cocos-game\CarrotDefense\build\CMakeFiles\3.29.1\CMakeCCompiler.cmake;E:\cocos-game\CarrotDefense\build\CMakeFiles\3.29.1\CMakeCXXCompiler.cmake;E:\cocos-game\CarrotDefense\build\CMakeFiles\3.29.1\CMakeRCCompiler.cmake;E:\cocos-game\CarrotDefense\build\CMakeFiles\3.29.1\CMakeSystem.cmake;E:\cocos-game\CarrotDefense\cocos2d\cmake\Modules\CocosBuildHelpers.cmake;E:\cocos-game\CarrotDefense\cocos2d\cmake\Modules\CocosBuildModules.cmake;E:\cocos-game\CarrotDefense\cocos2d\cmake\Modules\CocosBuildSet.cmake;E:\cocos-game\CarrotDefense\cocos2d\cmake\Modules\CocosCompileOptions.cmake;E:\cocos-game\CarrotDefense\cocos2d\cmake\Modules\CocosPickLibs.cmake;E:\cocos-game\CarrotDefense\cocos2d\cmake\Modules\CocosSelectModule.cmake;E:\cocos-game\CarrotDefense\cocos2d\cmake\Modules\CocosUseLibs.cmake;E:\cocos-game\CarrotDefense\cocos2d\cocos\2d\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\3d\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\audio\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\base\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\deprecated\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\editor-support\cocosbuilder\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\editor-support\cocostudio\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\editor-support\spine\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\math\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\navmesh\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\network\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\physics\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\physics3d\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\platform\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\renderer\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\storage\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\ui\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\cocos\vr\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\extensions\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\external\recast\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\external\tinyxml2\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\external\unzip\CMakeLists.txt;E:\cocos-game\CarrotDefense\cocos2d\external\xxhash\CMakeLists.txt;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">E:\cocos-game\CarrotDefense\build\CMakeFiles\generate.stamp;E:\cocos-game\CarrotDefense\build\engine\external\recast\CMakeFiles\generate.stamp;E:\cocos-game\CarrotDefense\build\engine\external\tinyxml2\CMakeFiles\generate.stamp;E:\cocos-game\CarrotDefense\build\engine\external\unzip\CMakeFiles\generate.stamp;E:\cocos-game\CarrotDefense\build\engine\external\flatbuffers\CMakeFiles\generate.stamp;E:\cocos-game\CarrotDefense\build\engine\external\xxhash\CMakeFiles\generate.stamp;E:\cocos-game\CarrotDefense\build\engine\cocos\core\CMakeFiles\generate.stamp</Outputs>
+      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|win32'">false</LinkObjects>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

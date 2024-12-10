@@ -45,6 +45,12 @@
     <ClCompile Include="GameDataManager.cpp">
       <Filter>src\Global</Filter>
     </ClCompile>
+    <ClCompile Include="Setting.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioManager.hpp">
+      <Filter>src\Global</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -77,6 +83,13 @@
     <ClInclude Include="GameDataManager.h">
       <Filter>src\Global</Filter>
     </ClInclude>
+    <ClInclude Include="Setting.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="StateObserver.hpp">
+      <Filter>src\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Property.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

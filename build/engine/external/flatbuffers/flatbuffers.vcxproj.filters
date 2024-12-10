@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\flatc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\idl_gen_cpp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\idl_gen_fbs.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\idl_gen_general.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\idl_gen_go.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\idl_gen_text.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\idl_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="E:\cocos-game\CarrotDefense\cocos2d\external\flatbuffers\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{77D45493-5E57-3416-B029-445E42CCBBF6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

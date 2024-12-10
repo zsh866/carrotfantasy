@@ -292,14 +292,12 @@ bool GameDataManager::getSfxEnabled()
 float GameDataManager::getBgmVolume()
 {
     auto ret = getSettingValue(_db.get(), "bgm_volume", "50.0");
-    CCLOG("**BgmVolume: %s **", ret.c_str());
     return std::stof(ret);
 }
 
 float GameDataManager::getSfxVolume()
 {
     auto ret = getSettingValue(_db.get(), "sfx_volume", "50.0");
-    CCLOG("**SfxVolume: %s **", ret.c_str());
     return std::stof(ret);
 }
 
