@@ -1,5 +1,4 @@
 # Cocos2d-x
-cocos2d/
 proj.android/build/
 proj.android/app/build/
 proj.android/app/libs/
@@ -8,7 +7,6 @@ proj.android/app/obj/
 proj.android/app/assets/
 proj.android/local.properties
 proj.ios_mac/build/
-proj.win32/Debug.win32/
 proj.win32/Release.win32/
 proj.win32/x64/
 bin/

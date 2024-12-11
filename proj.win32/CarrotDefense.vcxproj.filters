@@ -19,6 +19,12 @@
     <Filter Include="src\Global">
       <UniqueIdentifier>{f0d0c9e5-e864-4fe6-952e-b2c616e346ae}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\Scene\GameScene">
+      <UniqueIdentifier>{07be2ec5-ea97-4bfb-8573-92b2ea675ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Monster">
+      <UniqueIdentifier>{f58a786f-b653-4af8-96f3-f1cf061b2f9c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -50,6 +56,12 @@
     </ClCompile>
     <ClCompile Include="AudioManager.hpp">
       <Filter>src\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelOne.cpp">
+      <Filter>src\Scene\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterBase.cpp">
+      <Filter>src\Monster</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,6 +102,15 @@
       <Filter>src\Helper</Filter>
     </ClInclude>
     <ClInclude Include="Property.hpp" />
+    <ClInclude Include="LevelOne.h">
+      <Filter>src\Scene\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterBase.hpp">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss01.hpp">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

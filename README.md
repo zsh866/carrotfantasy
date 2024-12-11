@@ -1,4 +1,8 @@
 # 开发说明
+# 创建工程
+    ```bash
+    cocos new carrotfantasy -p com.tongji.carrotfantasy -l cpp -d e:/cocos-game
+    ```
 ## 数据持久化
 使用sqlite3数据库，若各位电脑上没有sqlite3，请自行安装。
 ### 安装方法：

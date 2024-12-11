@@ -76,6 +76,7 @@ void MapSelectUI::onStartButtonClicked()
     switch (currentLevel) {
     case LevelType::SKY:
         CCLOG("gameScene = SkyGameScene::createScene()");
+        Director::getInstance()->replaceScene(LevelOne::createScene());
         break;
     case LevelType::DESERT:
         CCLOG("gameScene = DesertGameScene::createScene()");
