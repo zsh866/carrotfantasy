@@ -1,35 +1,15 @@
-# Cocos2d-x
-proj.android/build/
-proj.android/app/build/
-proj.android/app/libs/
-proj.android/app/.cxx/
-proj.android/app/obj/
-proj.android/app/assets/
-proj.android/local.properties
-proj.ios_mac/build/
-proj.win32/Release.win32/
-proj.win32/x64/
-bin/
-libs/
-
-# Visual Studio 2022
-.vs/
-*.sdf
-*.opensdf
-*.suo
-*.user
-*.aps
-*.pdb
-*.ilk
-*.ncb
+# 预编译头文件
+.pch
+.ipch
+pch/
 ipch/
-Debug/
-Release/
-x64/
-Win32/
-*.opendb
-*.VC.db
-*.VC.VC.opendb
+.sdf
+.opensdf
+# Debug 和 Release 目录
+*/Debug/
+*/Debug.win32/
+*/Release/
+*/Release.win32/
 
 # 编译产物
 *.o
