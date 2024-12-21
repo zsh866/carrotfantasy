@@ -17,10 +17,7 @@
 *.o
 *.obj
 *.exe
-*.dll
 *.so
-*.dylib
-*.lib
 *.exp
 *.idb
 
