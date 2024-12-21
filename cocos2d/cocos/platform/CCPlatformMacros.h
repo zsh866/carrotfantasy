@@ -218,7 +218,7 @@ private: varType varName; public: virtual inline varType get##funName(void) cons
 #define CCLOGWARN(...)   do {} while (0)
 
 #elif COCOS2D_DEBUG == 1
-#define (format, ...)      cocos2d::log(format, ##__VA_ARGS__)
+#define CCLOG(format, ...)      cocos2d::log(format, ##__VA_ARGS__)
 #define CCLOGERROR(format,...)  cocos2d::log(format, ##__VA_ARGS__)
 #define CCLOGINFO(format,...)   do {} while (0)
 #define CCLOGWARN(...) __CCLOGWITHFUNCTION(__VA_ARGS__)

@@ -1,8 +1,10 @@
 # 预编译头文件
 .pch
 .ipch
-pch/
-ipch/
+*.pch
+*.ipch
+*/pch/
+*/ipch/
 .sdf
 .opensdf
 # Debug 和 Release 目录

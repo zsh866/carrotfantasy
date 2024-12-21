@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="win32">
+      <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="resource">
+      <UniqueIdentifier>{715254bc-d70b-4ec5-bf29-467dd3ace079}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Global">
+      <UniqueIdentifier>{d67f670b-d455-4a7e-8c92-9d59dfd52660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Helper">
+      <UniqueIdentifier>{5a3b8be4-92ad-47d1-b37f-7e103b9ea2e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Monster">
+      <UniqueIdentifier>{21b73745-10d3-4cfc-aa2a-b7465e919d3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Scene">
+      <UniqueIdentifier>{67069d14-43ca-4f76-91f3-af514ec24973}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Scene\GameScene">
+      <UniqueIdentifier>{3e670bd5-5d0c-47e4-b866-ed2bbc10cbf1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\AppDelegate.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Config.cpp">
+      <Filter>src\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="GameDataManager.cpp">
+      <Filter>src\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterBase.cpp">
+      <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStart.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelSelect.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="MapSelectUI.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Setting.cpp">
+      <Filter>src\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelOne.cpp">
+      <Filter>src\Scene\GameScene</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="main.h">
+      <Filter>win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\AppDelegate.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\HelloWorldScene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioManager.hpp">
+      <Filter>src\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>src\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="GameDataManager.h">
+      <Filter>src\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectedMapInfo.hpp">
+      <Filter>src\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="StateObserver.hpp">
+      <Filter>src\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Chinese.hpp">
+      <Filter>src\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="Boss01.hpp">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterBase.hpp">
+      <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStart.hpp">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelSelect.hpp">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="MapSelectUI.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Setting.h">
+      <Filter>src\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelOne.h">
+      <Filter>src\Scene\GameScene</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="game.rc">
+      <Filter>resource</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
