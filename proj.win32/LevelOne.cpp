@@ -14,13 +14,15 @@ bool LevelOne::init()
 {
     map = TMXTiledMap::create("/scene/level1/level1.tmx");
     CCLOG("get map");
-    auto winSize = Director::getInstance()->getWinSize();
+    auto const winSize = Director::getInstance()->getWinSize();
     auto bgLayer = map->getLayer("bg");
-    CCLOG("get bgLayer");
+    assert(bgLayer != nullptr, "bgLayer is nullptr");
+
     bgLayer->setAnchorPoint(Point(0.5f, 0.5f));
     bgLayer->setPosition(Point(winSize.width / 2, winSize.height / 2));
 
-    objects = map->getObjectGroup("path");
+    objects = map->getObjectGroup("ava_path");
+    assert(objects != nullptr, "objects is nullptr");
     initPointsVector(0);
 
     auto monster = Monster::create();
@@ -44,8 +46,8 @@ void LevelOne::initPointsVector(float offX)
     // 2
     while (point.begin() != point.end()) {
         // 3
-        float x = point.at("x").asFloat();
-        float y = point.at("y").asFloat();
+        const float x = point.at("x").asFloat();
+        const float y = point.at("y").asFloat();
         // 4
         runOfPoint = Node::create();
         runOfPoint->setPosition(Point(x - offX, y));

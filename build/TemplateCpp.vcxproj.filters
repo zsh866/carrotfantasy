@@ -66,6 +66,318 @@
     <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\WelcomeScene\leaf2.PNG">
       <Filter>Resources\Scene\WelcomeScene</Filter>
     </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1.plist">
+      <Filter>Resources\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1.png">
+      <Filter>Resources\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1.tmx">
+      <Filter>Resources\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-0.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-1.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-10.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-11.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-12.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-13.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-14.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-15.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-16.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-17.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-18.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-19.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-2.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-20.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-21.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-22.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-23.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-24.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-25.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-26.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-27.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-28.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-29.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-3.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-30.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-31.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-32.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-33.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-34.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-35.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-36.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-37.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-38.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-39.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-4.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-40.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-41.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-42.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-43.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-44.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-45.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-46.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-47.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-48.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-49.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-5.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-50.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-51.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-52.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-53.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-54.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-55.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-56.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-57.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-58.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-59.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-6.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-60.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-61.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-62.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-63.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-64.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-65.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-66.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-67.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-68.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-69.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-7.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-70.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-71.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-72.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-73.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-74.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-75.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-76.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-77.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-78.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-79.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-8.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-80.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-81.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-82.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-83.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-84.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-85.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-86.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-87.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-88.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-89.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-9.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-90.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-91.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-92.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-93.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-94.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\Level_1-95.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\level1.plist">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\level1.png">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\level1.tmx">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\level1.tps">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\Scene\level1\level1.tsx">
+      <Filter>Resources\Scene\level1</Filter>
+    </ClInclude>
     <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\fonts\Marker Felt.ttf">
       <Filter>Resources\fonts</Filter>
     </ClInclude>
@@ -74,6 +386,30 @@
     </ClInclude>
     <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\.gitkeep">
       <Filter>Resources\res</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Item\Monsters01-hd.plist">
+      <Filter>Resources\res\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Item\Monsters01-hd.png">
+      <Filter>Resources\res\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Item\Monsters02-hd.plist">
+      <Filter>Resources\res\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Item\Monsters02-hd.png">
+      <Filter>Resources\res\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Item\Object01-hd.plist">
+      <Filter>Resources\res\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Item\Object01-hd.png">
+      <Filter>Resources\res\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Item\Object02-hd.plist">
+      <Filter>Resources\res\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Item\Object02-hd.png">
+      <Filter>Resources\res\Item</Filter>
     </ClInclude>
     <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\Layer.csb">
       <Filter>Resources\res</Filter>
@@ -198,6 +534,9 @@
     <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\WelcomeScene\Btn_NormalModleLight.PNG">
       <Filter>Resources\res\WelcomeScene</Filter>
     </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\WelcomeScene\Btn_Set.PNG">
+      <Filter>Resources\res\WelcomeScene</Filter>
+    </ClInclude>
     <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\WelcomeScene\Btn_SetLight.PNG">
       <Filter>Resources\res\WelcomeScene</Filter>
     </ClInclude>
@@ -227,6 +566,9 @@
     </ClInclude>
     <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\WelcomeScene\leaf2.PNG">
       <Filter>Resources\res\WelcomeScene</Filter>
+    </ClInclude>
+    <ClInclude Include="E:\cocos-game\CarrotDefense\Resources\res\music\bgm.mp3">
+      <Filter>Resources\res\music</Filter>
     </ClInclude>
     <ClInclude Include="E:\cocos-game\CarrotDefense\Classes\AppDelegate.h">
       <Filter>Source Files\Classes</Filter>
@@ -259,11 +601,17 @@
     <Filter Include="Resources\Scene\WelcomeScene">
       <UniqueIdentifier>{12D7EFF1-91CE-3F43-8D19-4E272559DBBE}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resources\Scene\level1">
+      <UniqueIdentifier>{88007C9B-4629-3CD1-AEF5-E84A7C0A20AA}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Resources\fonts">
       <UniqueIdentifier>{42488574-C4D9-399F-8614-AE219FC143C3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources\res">
       <UniqueIdentifier>{1228F748-49DE-3157-8209-77C153EAD6F0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res\Item">
+      <UniqueIdentifier>{231BCB43-007C-3EF9-B165-38B67E4D1011}</UniqueIdentifier>
     </Filter>
     <Filter Include="Resources\res\LevelScene">
       <UniqueIdentifier>{A29A6AC8-3A1E-34F6-870A-F1ADF7D9137A}</UniqueIdentifier>
@@ -276,6 +624,9 @@
     </Filter>
     <Filter Include="Resources\res\WelcomeScene">
       <UniqueIdentifier>{9DA08781-756A-3085-8528-BDEFB9603EFD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\res\music">
+      <UniqueIdentifier>{AAF9D0F5-E049-33AD-88A4-04A849D66D9B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{77D45493-5E57-3416-B029-445E42CCBBF6}</UniqueIdentifier>

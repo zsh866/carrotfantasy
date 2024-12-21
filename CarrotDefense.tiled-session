@@ -68,13 +68,21 @@
             "scale": 0.866875,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 314.9242970439799,
+                "x": 479.884643114636,
                 "y": 204.18168709444848
             }
         },
         "Resources/Scene/level1/level1.tsx": {
             "scaleInDock": 0.33,
             "scaleInEditor": 1
+        },
+        "Resources/Scene/level2/未命名.tmx": {
+            "scale": 0.866875,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 479.884643114636,
+                "y": 319.5385724585436
+            }
         },
         "Resources/res/MapScene/level1.tmx": {
             "scale": 0.866875,
@@ -100,10 +108,10 @@
     ],
     "project": "CarrotDefense.tiled-project",
     "recentFiles": [
+        "Resources/Scene/level1.tmx",
         "Resources/Scene/level1/level1.tsx",
         "Resources/Scene/level1/level1.tmx",
         "C:/Users/dry33/Documents/Cocos/CocosProjects/CarrotDefenseMap/cocosstudio/MapScene/level1.tmx",
-        "Resources/Scene/level1.tmx",
         "C:/Users/dry33/Documents/Cocos/CocosProjects/CarrotDefenseMap/Resources/level1.tsx",
         "Resources/res/MapScene/level1.tmx",
         "C:/Users/dry33/Downloads/保卫萝卜-官方中文版_1.1.0_APKPure/assets/Themes/Theme6/BG2/BGPath.tmx",
