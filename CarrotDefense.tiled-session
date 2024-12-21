@@ -3,10 +3,14 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "Resources/Scene/level1/level1.tmx",
+    "activeFile": "Resources/Scene/level2/level2.tmx",
     "expandedProjectPaths": [
-        ".",
-        "Map"
+        "Resources/Scene/level2",
+        "Resources/Scene/level1",
+        "Resources",
+        "Map",
+        "Resources/Scene",
+        "."
     ],
     "file.lastUsedOpenFilter": "全部文件 (*)",
     "fileStates": {
@@ -60,28 +64,65 @@
             "scale": 0.866875,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 479.884643114636,
+                "x": 583.1290555155011,
                 "y": 319.5385724585436
             }
         },
         "Resources/Scene/level1/level1.tmx": {
-            "scale": 0.866875,
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 0.33,
             "selectedLayer": 2,
             "viewCenter": {
-                "x": 479.884643114636,
-                "y": 204.18168709444848
+                "x": 478.78787878787875,
+                "y": 318.18181818181813
             }
         },
         "Resources/Scene/level1/level1.tsx": {
             "scaleInDock": 0.33,
             "scaleInEditor": 1
         },
-        "Resources/Scene/level2/未命名.tmx": {
-            "scale": 0.866875,
+        "Resources/Scene/level2/LevelOneTwo.tmx": {
+            "scale": 0.7817708333333333,
             "selectedLayer": 0,
             "viewCenter": {
-                "x": 479.884643114636,
-                "y": 319.5385724585436
+                "x": 534.0439706862091,
+                "y": 199.54696868754166
+            }
+        },
+        "Resources/Scene/level2/LevelOneTwo.tsx": {
+            "scaleInDock": 0.33,
+            "scaleInEditor": 1
+        },
+        "Resources/Scene/level2/level1.tmx": {
+            "scale": 0.9589062499999998,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 480.2346423333877,
+                "y": 320.15642822225846
+            }
+        },
+        "Resources/Scene/level2/level2.tmx": {
+            "scale": 0.8025520833333334,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 466.63638133558305,
+                "y": 144.53890583425272
+            }
+        },
+        "Resources/Scene/level2/level2.tsx": {
+            "scaleInDock": 1
+        },
+        "Resources/Scene/level2/未命名.tmx": {
+            "expandedObjectLayers": [
+                2
+            ],
+            "scale": 0.866875,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 263.5904830569575,
+                "y": 198.41384282624375
             }
         },
         "Resources/res/MapScene/level1.tmx": {
@@ -96,7 +137,7 @@
             "scaleInDock": 1
         }
     },
-    "last.imagePath": "E:/cocos-game/CarrotDefense/Resources/Scene/level1",
+    "last.imagePath": "E:/cocos-game/CarrotDefense/Resources/Scene/level2",
     "map.height": 8,
     "map.lastUsedFormat": "tmx",
     "map.tileHeight": 80,
@@ -104,20 +145,22 @@
     "map.width": 12,
     "openFiles": [
         "Resources/Scene/level1/level1.tmx",
-        "Resources/Scene/level1/level1.tsx"
+        "Resources/Scene/level2/level2.tmx"
     ],
     "project": "CarrotDefense.tiled-project",
     "recentFiles": [
+        "Resources/Scene/level1/level1.tmx",
+        "Resources/Scene/level2/level2.tmx",
+        "Resources/Scene/level2/level1.tmx",
+        "Resources/Scene/level2/LevelOneTwo.tmx",
+        "Resources/Scene/level2/LevelOneTwo.tsx",
         "Resources/Scene/level1.tmx",
         "Resources/Scene/level1/level1.tsx",
-        "Resources/Scene/level1/level1.tmx",
+        "Resources/Scene/level2/未命名.tmx",
         "C:/Users/dry33/Documents/Cocos/CocosProjects/CarrotDefenseMap/cocosstudio/MapScene/level1.tmx",
         "C:/Users/dry33/Documents/Cocos/CocosProjects/CarrotDefenseMap/Resources/level1.tsx",
         "Resources/res/MapScene/level1.tmx",
-        "C:/Users/dry33/Downloads/保卫萝卜-官方中文版_1.1.0_APKPure/assets/Themes/Theme6/BG2/BGPath.tmx",
-        "C:/Users/dry33/Downloads/保卫萝卜-官方中文版_1.1.0_APKPure/assets/Themes/Theme1/BG1/BGPath.tmx",
-        "Map/map1.tmx",
-        "Map/32x32.tsx"
+        "C:/Users/dry33/Downloads/保卫萝卜-官方中文版_1.1.0_APKPure/assets/Themes/Theme6/BG2/BGPath.tmx"
     ],
     "tileset.lastUsedFormat": "tsx",
     "tileset.tileSize": {

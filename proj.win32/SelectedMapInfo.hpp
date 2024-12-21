@@ -11,7 +11,7 @@ private:
     // 单例模式，构造函数私有
     SelectedMapInfo() noexcept
         : _currentMapLevel(LevelType::NONE)
-        , _currentMapIndex(-1)
+        , _currentMapIndex(0)
     {
     }
     LevelType _currentMapLevel; // 当前选择的地图等级

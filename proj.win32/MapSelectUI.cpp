@@ -30,6 +30,21 @@ bool MapSelectUI::init(const std::string& csbPath) {
     initializeUI(rootNode);
     setupMapDisplay();
 
+    auto listener = EventListenerCustom::create(EVENT_RETURN_TO_LEVEL, [this](EventCustom* event) {
+        auto LevelType = SelectedMapInfo::getInstance().getMapLevel();
+        std::string csbPath = "";
+        switch (LevelType) {
+        case LevelType::SKY:
+            csbPath = "res/SkylineScene.csb";
+            break;
+        default:
+            break;
+        }
+        auto scene = MapSelectUI::createScene(csbPath);
+        Director::getInstance()->replaceScene(TransitionFade::create(0.5f, scene));
+    });
+    Director::getInstance()->getEventDispatcher()->addEventListenerWithFixedPriority(listener, 1);
+
     return true;
 }
 
@@ -38,7 +53,17 @@ void MapSelectUI::initializeUI(Node* rootNode)
 {
     _btnBack = static_cast<Button*>(rootNode->getChildByName("btnBack"));
     _btnStart = static_cast<Button*>(rootNode->getChildByName("btnStart"));
-    _mapPreview = static_cast<Sprite*>(rootNode->getChildByName("mapPreview"));
+    _mapPreview = static_cast<PageView*>(rootNode->getChildByName("mapPreview"));
+
+    if (_mapPreview) {
+        _mapPreview->addEventListener(CC_CALLBACK_2(MapSelectUI::onPageViewEvent, this));
+
+        // 设置初始选中页面
+        int currentIndex = SelectedMapInfo::getInstance().getMapIndex();
+        if (currentIndex >= 0 && currentIndex < _mapPreview->getItems().size()) {
+            _mapPreview->scrollToItem(currentIndex);
+        }
+    }
 
     _btnBack->addTouchEventListener([this](Ref* sender, Widget::TouchEventType type) {
         if (type == Widget::TouchEventType::ENDED) {
@@ -71,12 +96,22 @@ void MapSelectUI::onStartButtonClicked()
 {
     // 根据不同关卡类型创建对应的游戏场景
     LevelType currentLevel = SelectedMapInfo::getInstance().getMapLevel();
+    int currentIndex = SelectedMapInfo::getInstance().getMapIndex();
     Scene* gameScene = nullptr;
 
     switch (currentLevel) {
     case LevelType::SKY:
-        CCLOG("gameScene = SkyGameScene::createScene()");
-        Director::getInstance()->replaceScene(LevelOne::createScene());
+        switch (currentIndex) {
+        case 0:
+            Director::getInstance()->replaceScene(LevelOneOne::createScene());
+            break;
+        case 1:
+            Director::getInstance()->replaceScene(LevelOneTwo::createScene());
+            break;
+        default:
+            CCLOG("未知的关卡类型");
+            return;
+        }
         break;
     case LevelType::DESERT:
         CCLOG("gameScene = DesertGameScene::createScene()");
@@ -91,5 +126,16 @@ void MapSelectUI::onStartButtonClicked()
 
     if (gameScene) {
         // Director::getInstance()->replaceScene(gameScene);
+    }
+}
+
+void MapSelectUI::onPageViewEvent(Ref* sender, PageView::EventType type)
+{
+    if (type == PageView::EventType::TURNING) {
+        int currentIndex = _mapPreview->getCurrentPageIndex();
+        SelectedMapInfo::getInstance().setMapIndex(currentIndex);
+        CCLOG("currentIndex = %d", currentIndex);
+        // 可以在这里更新地图预览图
+        // updateMapPreview(currentIndex);
     }
 }

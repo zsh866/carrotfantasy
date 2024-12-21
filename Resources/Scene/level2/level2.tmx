@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="12" height="8" tilewidth="80" tileheight="80" infinite="0" nextlayerid="5" nextobjectid="48">
+ <tileset firstgid="1" source="level2.tsx"/>
+ <layer id="1" name="bg" width="12" height="8">
+  <data encoding="csv">
+89,81,73,65,57,49,41,33,25,17,9,1,
+2,10,18,76,76,76,76,76,76,18,82,2,
+4,18,18,29,29,76,76,29,29,18,18,3,
+5,18,18,18,59,44,44,59,18,18,18,4,
+6,18,18,18,18,18,18,18,18,18,18,5,
+6,18,18,18,76,59,59,76,18,18,18,6,
+7,15,18,18,76,76,76,76,18,18,87,95,
+8,16,24,32,40,48,56,64,72,80,88,96
+</data>
+ </layer>
+ <layer id="2" name="path" width="12" height="8">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,
+0,1,0,0,1610612819,22,22,22,22,61,1,0,
+0,1,0,0,0,0,0,0,0,13,1,0,
+0,1,37,22,22,22,22,22,22,38,1,0,
+0,1,12,1,1,0,0,1,1,1,1,0,
+0,0,14,22,22,22,22,2684354571,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+ <objectgroup id="4" name="ava_path">
+  <object id="26" name="21" x="365.085" y="191.888"/>
+  <object id="27" name="20" x="439.847" y="193.134"/>
+  <object id="28" name="19" x="502.148" y="195.626"/>
+  <object id="29" name="18" x="585.632" y="198.118"/>
+  <object id="30" name="17" x="664.131" y="204.348"/>
+  <object id="31" name="16" x="750.107" y="194.38"/>
+  <object id="32" name="15" x="772.536" y="277.864" height="1.24603"/>
+  <object id="33" name="14" x="761.321" y="342.657"/>
+  <object id="34" name="13" x="689.052" y="356.363"/>
+  <object id="35" name="12" x="601.83" y="367.577"/>
+  <object id="36" name="11" x="534.545" y="361.347"/>
+  <object id="37" name="10" x="449.815" y="361.347"/>
+  <object id="38" name="9" x="366.331" y="360.101" width="1.24603"/>
+  <object id="39" name="8" x="299.046" y="357.609"/>
+  <object id="40" name="7" x="223.038" y="358.855"/>
+  <object id="41" name="6" x="189.396" y="432.371" width="2.49205" height="3.73808"/>
+  <object id="42" name="5" x="210.578" y="502.148"/>
+  <object id="43" name="4" x="284.094" y="520.838"/>
+  <object id="44" name="3" x="358.855" y="523.331"/>
+  <object id="45" name="2" x="437.355" y="525.823" width="2.49205"/>
+  <object id="46" name="1" x="512.116" y="528.315"/>
+  <object id="47" name="0" x="585.632" y="518.346" width="2.49205"/>
+ </objectgroup>
+</map>

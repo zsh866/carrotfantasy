@@ -1,10 +1,11 @@
 #pragma once
+
 #include "SelectedMapInfo.hpp"
 #include "cocos2d.h"
 #include "cocostudio/CocoStudio.h"
 #include "ui/CocosGUI.h"
-#include"LevelOne.h"
-
+#include "LevelOneOne.h"
+#include "LevelOneTwo.h"
 
 class MapSelectUI : public cocos2d::Scene {
 public:
@@ -29,10 +30,11 @@ private:
     void setupMapDisplay();
     void onBackButtonClicked();
     void onStartButtonClicked();
+    void onPageViewEvent(Ref* sender, PageView::EventType type);
 
     std::string _csbPath;
     cocos2d::ui::Button* _btnBack;
     cocos2d::ui::Button* _btnStart;
-    cocos2d::Sprite* _mapPreview;
+    cocos2d::ui::PageView* _mapPreview;
     int _mapIndex;
 };

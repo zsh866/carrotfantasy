@@ -153,11 +153,13 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="AudioManager.hpp" />
+    <ClCompile Include="BaseGameScene.cpp" />
     <ClCompile Include="Config.cpp" />
     <ClCompile Include="GameDataManager.cpp" />
     <ClCompile Include="GameStart.cpp" />
-    <ClCompile Include="LevelOne.cpp" />
+    <ClCompile Include="LevelOneOne.cpp" />
     <ClCompile Include="LevelSelect.cpp" />
+    <ClCompile Include="LevelOneTwo.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MapSelectUI.cpp" />
     <ClCompile Include="MonsterBase.cpp" />
@@ -166,13 +168,15 @@ xcopy "$(ProjectDir)..\Resources" "$(OutDir)" /D /E /I /F /Y
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="BaseGameScene.h" />
     <ClInclude Include="Boss01.hpp" />
     <ClInclude Include="Chinese.hpp" />
     <ClInclude Include="Config.h" />
     <ClInclude Include="GameDataManager.h" />
     <ClInclude Include="GameStart.hpp" />
-    <ClInclude Include="LevelOne.h" />
+    <ClInclude Include="LevelOneOne.h" />
     <ClInclude Include="LevelSelect.hpp" />
+    <ClInclude Include="LevelOneTwo.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="MapSelectUI.h" />
     <ClInclude Include="MonsterBase.hpp" />

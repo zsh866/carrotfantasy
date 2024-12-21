@@ -57,11 +57,17 @@
     <ClCompile Include="AudioManager.hpp">
       <Filter>src\Global</Filter>
     </ClCompile>
-    <ClCompile Include="LevelOne.cpp">
+    <ClCompile Include="LevelOneOne.cpp">
       <Filter>src\Scene\GameScene</Filter>
     </ClCompile>
     <ClCompile Include="MonsterBase.cpp">
       <Filter>src\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelOneTwo.cpp">
+      <Filter>src\Scene\GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseGameScene.cpp">
+      <Filter>src\Scene\GameScene</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -102,7 +108,7 @@
       <Filter>src\Helper</Filter>
     </ClInclude>
     <ClInclude Include="Property.hpp" />
-    <ClInclude Include="LevelOne.h">
+    <ClInclude Include="LevelOneOne.h">
       <Filter>src\Scene\GameScene</Filter>
     </ClInclude>
     <ClInclude Include="MonsterBase.hpp">
@@ -110,6 +116,12 @@
     </ClInclude>
     <ClInclude Include="Boss01.hpp">
       <Filter>src\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelOneTwo.h">
+      <Filter>src\Scene\GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseGameScene.h">
+      <Filter>src\Scene\GameScene</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
