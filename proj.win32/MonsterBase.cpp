@@ -1,4 +1,5 @@
 #include "MonsterBase.hpp"
+#include "BaseGameScene.h"
 
 bool MonsterBase::init()
 {
@@ -68,6 +69,9 @@ void MonsterBase::runFllowPoint()
     if (point != NULL) {
         runAction(CCSequence::create(MoveTo::create(getRunSpeed(), point->getPosition()), CallFuncN::create(CC_CALLBACK_0(MonsterBase::runFllowPoint, this)), NULL));
     }
+    else {
+        dispatchReachedEndEvent();
+    }
 }
 
 void MonsterBase::setPointsVector(Vector<Node*> points)
@@ -101,4 +105,22 @@ void MonsterBase::playAnimation(const std::string& animName)
         auto animate = Animate::create(animation);
         runAction(animate);
     }
+}
+
+bool MonsterBase::checkReachedEnd()
+{
+    return pointCounter >= pointsVector.size() - 1;
+}
+
+void MonsterBase::dispatchReachedEndEvent()
+{
+    // 先移除自己，避免在事件处理过程中被重复移除
+    this->retain(); // 暂时保持对象存活
+    this->removeFromParent();
+
+    // 创建并发送事件
+    EventCustom event(EVENT_ENEMY_REACHED_END);
+    Director::getInstance()->getEventDispatcher()->dispatchEvent(&event);
+
+    this->release(); // 释放对象
 }

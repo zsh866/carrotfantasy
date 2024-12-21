@@ -1,5 +1,4 @@
 #include "BaseGameScene.h"
-
 bool BaseGameScene::init()
 {
     if (!Scene::init()) {
@@ -8,7 +7,15 @@ bool BaseGameScene::init()
 
     _isPaused = false;
     initButtons();
+    initEventListeners();
     return true;
+}
+BaseGameScene::~BaseGameScene()
+{
+    if (_enemyReachedEndListener) {
+        _eventDispatcher->removeEventListener(_enemyReachedEndListener);
+        _enemyReachedEndListener = nullptr;
+    }
 }
 void BaseGameScene::initMap(const std::string& mapPath)
 {
@@ -158,4 +165,142 @@ void BaseGameScene::onOptionsButtonClicked(Ref* sender, Widget::TouchEventType t
         return;
     // TODO: 显示选项菜单
     // 可以创建一个新的弹出层来显示游戏选项
+}
+
+void BaseGameScene::showWinMask()
+{
+    // 创建半透明黑色遮罩
+    _maskLayer = LayerColor::create(Color4B(0, 0, 0, 180));
+    this->addChild(_maskLayer, 100);
+
+    // 显示胜利图片
+    _resultSprite = Sprite::create("/res/UI/win.png");
+    _resultSprite->setPosition(Director::getInstance()->getVisibleSize() / 2);
+    _maskLayer->addChild(_resultSprite);
+
+    // 添加按钮
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    // 重新开始按钮
+    _maskRestartButton = Button::create(
+        "/res/UI/restart_normal.png",
+        "/res/UI/restart_selected.png",
+        "/res/UI/restart_normal.png");
+    _maskRestartButton->setPosition(Vec2(visibleSize.width / 2 - 150, visibleSize.height / 2 - 100));
+    _maskRestartButton->addTouchEventListener(CC_CALLBACK_2(BaseGameScene::onMaskRestartClicked, this));
+    _maskLayer->addChild(_maskRestartButton);
+
+    // 返回按钮
+    _maskBackButton = Button::create(
+        "/res/UI/return_normal.png",
+        "/res/UI/return_selected.png",
+        "/res/UI/return_normal.png");
+    _maskBackButton->setPosition(Vec2(visibleSize.width / 2 + 150, visibleSize.height / 2 - 100));
+    _maskBackButton->addTouchEventListener(CC_CALLBACK_2(BaseGameScene::onMaskBackClicked, this));
+    _maskLayer->addChild(_maskBackButton);
+}
+
+void BaseGameScene::showLoseMask()
+{
+    // 创建半透明黑色遮罩
+    _maskLayer = LayerColor::create(Color4B(0, 0, 0, 180));
+    this->addChild(_maskLayer, 100);
+
+    // 显示失败图片
+    _resultSprite = Sprite::create("/res/UI/lose.png");
+    _resultSprite->setPosition(Director::getInstance()->getVisibleSize() / 2);
+    _maskLayer->addChild(_resultSprite);
+
+    // 添加按钮 (与胜利界面使用相同的布局)
+    auto visibleSize = Director::getInstance()->getVisibleSize();
+
+    _maskRestartButton = Button::create(
+        "/res/UI/restart_normal.png",
+        "/res/UI/restart_selected.png",
+        "/res/UI/restart_normal.png");
+    _maskRestartButton->setPosition(Vec2(visibleSize.width / 2 - 150, visibleSize.height / 2 - 100));
+    _maskRestartButton->addTouchEventListener(CC_CALLBACK_2(BaseGameScene::onMaskRestartClicked, this));
+    _maskLayer->addChild(_maskRestartButton);
+
+    _maskBackButton = Button::create(
+        "/res/UI/return_normal.png",
+        "/res/UI/return_selected.png",
+        "/res/UI/return_normal.png");
+    _maskBackButton->setPosition(Vec2(visibleSize.width / 2 + 150, visibleSize.height / 2 - 100));
+    _maskBackButton->addTouchEventListener(CC_CALLBACK_2(BaseGameScene::onMaskBackClicked, this));
+    _maskLayer->addChild(_maskBackButton);
+}
+
+void BaseGameScene::initEventListeners()
+{
+    if (_enemyReachedEndListener) {
+        _eventDispatcher->removeEventListener(_enemyReachedEndListener);
+        _enemyReachedEndListener = nullptr;
+    }
+
+    _enemyReachedEndListener = EventListenerCustom::create(
+        EVENT_ENEMY_REACHED_END,
+        CC_CALLBACK_1(BaseGameScene::onEnemyReachedEnd, this));
+    _eventDispatcher->addEventListenerWithFixedPriority(_enemyReachedEndListener, 1);
+}
+
+void BaseGameScene::onMaskRestartClicked(Ref* sender, Widget::TouchEventType type)
+{
+    if (type != Widget::TouchEventType::ENDED)
+        return;
+
+    // 移除遮罩层
+    if (_maskLayer) {
+        _maskLayer->removeFromParent();
+        _maskLayer = nullptr;
+    }
+
+    // 如果游戏处于暂停状态，恢复游戏
+    if (_isPaused) {
+        Director::getInstance()->resume();
+        _isPaused = false;
+    }
+
+    // 使用之前实现的重新开始逻辑
+    auto newScene = createNewScene();
+    if (newScene) {
+        newScene->retain();
+        newScene->initMap(_currentMapPath);
+        newScene->autorelease();
+
+        Director::getInstance()->replaceScene(
+            TransitionFade::create(0.5f, newScene));
+    }
+}
+void BaseGameScene::onMaskBackClicked(Ref* sender, Widget::TouchEventType type)
+{
+    if (type != Widget::TouchEventType::ENDED)
+        return;
+
+    // 移除遮罩层
+    if (_maskLayer) {
+        _maskLayer->removeFromParent();
+        _maskLayer = nullptr;
+    }
+
+    // 如果游戏处于暂停状态，恢复游戏
+    if (_isPaused) {
+        Director::getInstance()->resume();
+        _isPaused = false;
+    }
+    // 发送返回地图选择的事件
+    EventCustom event(EVENT_RETURN_TO_LEVEL);
+    Director::getInstance()->getEventDispatcher()->dispatchEvent(&event);
+}
+
+void BaseGameScene::onEnemyReachedEnd(EventCustom* event)
+{
+    // 显示失败遮罩
+    showLoseMask();
+
+    // 暂停游戏
+    if (!_isPaused) {
+        Director::getInstance()->pause();
+        _isPaused = true;
+    }
 }

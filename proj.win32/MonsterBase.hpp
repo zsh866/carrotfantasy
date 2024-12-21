@@ -28,4 +28,7 @@ protected:
     Animation* animationRight;
     Animation* animationLeft;
     CC_SYNTHESIZE(float, runSpeed, RunSpeed);
+
+    bool checkReachedEnd(); // 添加检查是否到达终点的方法
+    void dispatchReachedEndEvent(); // 添加发送事件的方法
 };
